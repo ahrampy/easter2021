@@ -1,0 +1,128 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  /* box-sizing: border-box; */
+  margin: 10px;
+}
+
+#box-holder {
+  display: grid;
+  grid-template-columns: repeat(4, 38vh);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.box {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38vh;
+  height: 23.7vh;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 2.5s;
+}
+
+.clue {
+  font-size: 20px;
+  color: #333;
+  transition: 2.5s;
+}
+
+.found > img {
+  filter: invert(100);
+}
+
+.hidden .clue {
+  display: none;
+  opacity: 0;
+}
+
+#one {
+  background-color: #fffb79;
+}
+
+#two {
+  background-color: #ffffbf;
+}
+#three {
+  background-color: #52ffa9;
+}
+
+#four {
+  background-color: #bdfcc9;
+}
+
+#five {
+  background-color: #ffc0cb;
+}
+
+#six {
+  background-color: #ffbfa6;
+}
+#seven {
+  background-color: #ce90f2;
+}
+#eight {
+  background-color: #ffc2e8;
+}
+#nine {
+  background-color: #c8a2c8;
+}
+#ten {
+  background-color: #f2a4f2;
+}
+#eleven {
+  background-color: #95e1ff;
+}
+#twelve {
+  background-color: #08f4f4;
+}
+#thirteen {
+  background-color: #bcfff8;
+}
+#fourteen {
+  background-color: #c6ff94;
+}
+#fifteen {
+  background-color: #ffef94;
+}
+#sixteen {
+  background-color: #ffcf94;
+}
+
+/* mouse click */
+
+div.clickEffect {
+  position: fixed;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: #08f4f4;
+  border-radius: 50%;
+  animation: clickEffect 1s ease-out;
+  z-index: 99999;
+}
+
+@keyframes clickEffect {
+  0% {
+    opacity: 1;
+    width: 0.5em;
+    height: 0.5em;
+    margin: -0.25em;
+    border-width: 0.5em;
+    border-color: #f2a4f2;
+  }
+  100% {
+    opacity: 0.2;
+    width: 15em;
+    height: 15em;
+    margin: -7.5em;
+    border-width: 0.03em;
+    border-color: #ffcf94;
+  }
+}
